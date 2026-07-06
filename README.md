@@ -1,59 +1,46 @@
-# Personal CV website
+# Jade Eyraud — Online CV
 
-A modern, single-page CV. Sage-green theme, Manrope typeface. Everything (HTML,
-CSS, and the tiny script) lives in one self-contained `index.html`, so it renders
-correctly whether you double-click it, preview it, or serve it from GitHub Pages —
-**no build step.**
+A single-page, responsive CV site. Built from the **"1a Sidebar Sage"** design
+direction (pastel green · Manrope font), as chosen from the Claude Design handoff.
 
-## Structure
+## Files
 
 ```
-.
-├── index.html      # the whole site — edit your text + styles here
-├── assets/         # photo-color.jpg, photo-bw.jpg, and your cv.pdf (all PUBLIC)
-└── .nojekyll       # tells GitHub Pages to skip Jekyll processing
+site/
+├── index.html                     # the page (semantic HTML, all content inline)
+├── styles.css                     # all styling, responsive + print rules
+└── assets/
+    ├── photo-color.jpg            # colour headshot (shown on hover / when printing)
+    ├── photo-bw.jpg               # black & white headshot (default)
+    └── Jade_Eyraud_CV_2026.pdf    # linked by the "Download PDF" button
 ```
 
-> ⚠️ There is **no private folder**. A static site is entirely public — never commit
-> secrets, API keys, or private data.
+No build step, no dependencies. It's plain static HTML/CSS.
 
-## Editing
+## Run locally
 
-- **Text** (profile, experience, education, skills, languages, interests): edit the
-  matching sections in `index.html`.
-- **Colors**: change the CSS variables at the top of the `<style>` block
-  (`--green`, `--page-bg`, etc.) to re-theme the whole page.
-- **Photo**: replace `assets/photo-color.jpg` / `assets/photo-bw.jpg`
-  (hover swaps black-and-white → colour). Keep them square for best results.
-- **Download PDF button**: drop your CV in `assets/cv.pdf` (or edit the link).
-
-## Preview locally
-
-Just double-click `index.html`, or serve it:
+Open `index.html` directly in a browser, or serve the folder:
 
 ```bash
-python3 -m http.server 8000   # → http://localhost:8000
+cd site
+python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
-## Deploy to GitHub Pages
+## Features
 
-1. Create a repo named **`<your-username>.github.io`** (served at
-   `https://<your-username>.github.io`). Any other name works too, just under
-   `https://<your-username>.github.io/<repo-name>/`.
-2. Push these files:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial CV site"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<repo-name>.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Source: "Deploy from a branch"**, pick branch
-   **`main`** and folder **`/ (root)`**, then Save.
-4. Wait ~1 minute and visit your URL.
+- **Two-column layout** — sage sidebar (photo, contact, skills, languages,
+  interests) beside the main column (profile, experience, education).
+- **Photo hover swap** — the headshot shows black & white by default and fades
+  to colour on hover (`.photo-swap:hover .photo-bw`). Keyboard focus triggers it too.
+- **Subtle paw motif** by *Interests*, and a paw favicon — the quiet nod to the
+  two adopted cats.
+- **Responsive** — the sidebar stacks above the main column below 720px; the
+  header wraps on small phones.
+- **Print-ready** — printing hides the button, shows the colour photo, and keeps
+  the sage backgrounds (`@media print`).
 
-## Custom domain (optional)
+## Deploy
 
-You already own `jadeeyraud.com`. Add a file named `CNAME` containing `jadeeyraud.com`,
-then point the domain's DNS at GitHub Pages per their docs.
+Upload the contents of `site/` to any static host (Netlify, GitHub Pages,
+Cloudflare Pages, your own server). For the personal domain, drop these files at
+the web root of <https://jadeeyraud.com/>.
