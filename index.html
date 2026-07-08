@@ -15,7 +15,6 @@
   <!-- Paw favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cellipse cx='20' cy='27' rx='8.5' ry='6.5' fill='%235f8a5c'/%3E%3Ccircle cx='10' cy='17' r='3.2' fill='%235f8a5c'/%3E%3Ccircle cx='16.5' cy='12' r='3.2' fill='%235f8a5c'/%3E%3Ccircle cx='23.5' cy='12' r='3.2' fill='%235f8a5c'/%3E%3Ccircle cx='30' cy='17' r='3.2' fill='%235f8a5c'/%3E%3C/svg%3E">
 
-  <!-- Fonts: Manrope (Arial ↔ Montserrat feel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,31 +22,183 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#intro">Skip to content</a>
 
-  <main class="page">
-    <article class="cv" aria-label="Curriculum vitae of Jade Eyraud">
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#intro">
+      <svg class="nav__paw" width="22" height="22" viewBox="0 0 40 40" aria-hidden="true">
+        <ellipse cx="20" cy="27" rx="8.5" ry="6.5" fill="currentColor"></ellipse>
+        <circle cx="10" cy="17" r="3.2" fill="currentColor"></circle>
+        <circle cx="16.5" cy="12" r="3.2" fill="currentColor"></circle>
+        <circle cx="23.5" cy="12" r="3.2" fill="currentColor"></circle>
+        <circle cx="30" cy="17" r="3.2" fill="currentColor"></circle>
+      </svg>
+      <span>Jade Eyraud</span>
+    </a>
 
-      <!-- ============ SIDEBAR ============ -->
-      <aside class="cv__sidebar">
-        <div class="photo-swap" aria-hidden="false">
-          <img src="assets/photo-color.jpg" alt="Portrait of Jade Eyraud" width="520" height="520">
-          <img class="photo-bw" src="assets/photo-bw.jpg" alt="" width="520" height="520" aria-hidden="true">
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="nav__cv" href="assets/Jade_Eyraud_CV_2026.pdf" download>Download CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ INTRO / HERO ============ -->
+    <section class="hero" id="intro">
+      <div class="hero__inner">
+        <div class="hero__photo">
+          <div class="photo-swap">
+            <img src="assets/photo-color.jpg" alt="Portrait of Jade Eyraud" width="520" height="520">
+            <img class="photo-bw" src="assets/photo-bw.jpg" alt="" width="520" height="520" aria-hidden="true">
+          </div>
         </div>
+        <p class="hero__eyebrow">Hello, I'm</p>
+        <h1 class="hero__name">Jade Eyraud</h1>
+        <p class="hero__role">EMEA Marketing Manager</p>
+        <p class="hero__tag">10+ years turning brand strategy into campaigns, events and partnerships across EMEA — for the drone-inspection pioneers at Flyability and, before that, some names you'll recognise.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Get in touch</a>
+          <a class="btn btn--ghost" href="assets/Jade_Eyraud_CV_2026.pdf" download>Download CV</a>
+        </div>
+        <a class="hero__scroll" href="#about" aria-label="Scroll to content"><span></span></a>
+      </div>
+    </section>
 
-        <section class="side-block">
-          <h2 class="side-title">Contact</h2>
-          <ul class="contact-list">
-            <li><a href="tel:+"></a></li>
-            <li><a href="mailto:jade.eyraud@gmail.com">jade.eyraud@gmail.com</a></li>
-            <li><span>1009 Pully, Switzerland</span></li>
-            <li><a class="contact-strong" href="https://jadeeyraud.com/" target="_blank" rel="noopener">jadeeyraud.com</a></li>
-            <li><a class="contact-strong" href="https://www.linkedin.com/in/jade-eyraud-334b0742" target="_blank" rel="noopener">LinkedIn</a></li>
-          </ul>
-        </section>
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--about" id="about">
+      <div class="wrap reveal">
+        <p class="kicker">About</p>
+        <p class="lead">EMEA Marketing Manager at Flyability, leading regional marketing strategy and execution across campaigns, events, and partnerships for indoor drone inspection solutions. With 10+ years across marketing, communication, sales, and project management, I enjoy working with cross-functional teams and partners to drive shared goals. Having lived in China, the UK, and France, I bring strong cultural awareness, adaptability, and a collaborative approach to international environments.</p>
+      </div>
+    </section>
 
-        <section class="side-block">
-          <h2 class="side-title">Skills</h2>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--exp" id="experience">
+      <div class="wrap">
+        <p class="kicker reveal">Experience</p>
+        <h2 class="section__title reveal">The brands I've built for</h2>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-logo"><img src="assets/logos/flyability.png" alt="Flyability logo" loading="lazy"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-role">EMEA Marketing Manager</h3>
+                <span class="tl-date">Nov 2023 – Present</span>
+              </div>
+              <p class="tl-org">Flyability · Paudex, Switzerland · Automation Machinery</p>
+              <ul class="tl-bullets">
+                <li>Develop and execute the EMEA regional marketing strategy aligned with sales targets, supporting CHF 13.2M regional revenue goals.</li>
+                <li>Drive pipeline growth through lead generation, conversion optimisation, and localised campaigns across EMEA markets.</li>
+                <li>Build and manage the EMEA marketing roadmap with product, content, demand generation, and sales teams.</li>
+                <li>Lead regional events, reseller marketing relationships, and strategic partnerships, with a focus on the Nuclear industry.</li>
+                <li>Manage regional marketing operations, KPI reporting, stakeholder communications, and annual budget.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-logo"><img src="assets/logos/terracycle.png" alt="TerraCycle logo" loading="lazy"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-role">Retail Account Manager</h3>
+                <span class="tl-date">Apr – Nov 2022</span>
+              </div>
+              <p class="tl-org">TerraCycle Europe · London, UK · Environmental Services</p>
+              <ul class="tl-bullets">
+                <li>Managed a B2B client portfolio, leading the development and execution of recycling programmes at major European retailers.</li>
+                <li>Partnered with key stakeholders to ensure best-in-class implementation of brand activations.</li>
+                <li>Built post-programme performance analysis and made recommendations for retail revenue growth.</li>
+                <li>Worked cross-functionally with Account Management, Sales, Operations, Materials, Marketing, PR, Legal and Finance, also at Global level.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-logo"><img src="assets/logos/terracycle.png" alt="TerraCycle logo" loading="lazy"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-role">Marketing Project Manager</h3>
+                <span class="tl-date">May 2021 – Mar 2022</span>
+              </div>
+              <p class="tl-org">TerraCycle Europe · London, UK · Environmental Services</p>
+              <ul class="tl-bullets">
+                <li>Managed B2C and B2B digital marketing campaigns to promote TerraCycle's services.</li>
+                <li>Launched free national recycling programmes and led brands' marketing plans.</li>
+                <li>Monitored marketing surveys and reports, adjusting strategy to market specificities.</li>
+                <li>Met project requesters to translate briefs into technically and time-feasible deliveries, working with Creative, Content, Digital, Account Management, and Sales.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-logo"><img src="assets/logos/clinique.png" alt="Clinique logo" loading="lazy"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-role">Retail Marketing Coordinator</h3>
+                <span class="tl-date">Aug 2019 – Apr 2021</span>
+              </div>
+              <p class="tl-org">Clinique · The Estée Lauder Companies · London, UK</p>
+              <ul class="tl-bullets">
+                <li>Delivered retailers' strategy with a 360° approach for all activations on the marketing calendar.</li>
+                <li>Led the development of promotions across all retailers; designed locally produced POS material and managed print buying.</li>
+                <li>Implemented cultural life moments (e.g. Lunar New Year) and organised bi-annual key retailer and sales meetings.</li>
+                <li>Worked cross-functionally with PR, Sales, Social Media, CRM, E-Commerce, and VM; managed budget.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section section--edu" id="education">
+      <div class="wrap">
+        <p class="kicker reveal">Education</p>
+        <h2 class="section__title reveal">Where it started</h2>
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <div class="edu-card__logo"><img src="assets/logos/psb.png" alt="Paris School of Business logo" loading="lazy"></div>
+            <div>
+              <h3 class="edu-card__degree">Master, Luxury Brand Management</h3>
+              <p class="edu-card__school">Paris School of Business · Paris, France</p>
+              <span class="edu-card__date">Sep 2010 – Dec 2012</span>
+            </div>
+          </article>
+          <article class="edu-card reveal">
+            <div class="edu-card__logo"><img src="assets/logos/londonmet.png" alt="London Metropolitan University logo" loading="lazy"></div>
+            <div>
+              <h3 class="edu-card__degree">Bachelor, International Business Management</h3>
+              <p class="edu-card__school">London Metropolitan University · London, UK</p>
+              <span class="edu-card__date">Sep 2009 – Jun 2010</span>
+            </div>
+          </article>
+          <article class="edu-card reveal">
+            <div class="edu-card__logo"><img src="assets/logos/psb.png" alt="Paris School of Business logo" loading="lazy"></div>
+            <div>
+              <h3 class="edu-card__degree">Bachelor, Business Administration</h3>
+              <p class="edu-card__school">Paris School of Business · Paris, France</p>
+              <span class="edu-card__date">Sep 2007 – Jun 2010</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS + LANGUAGES + INTERESTS ============ -->
+    <section class="section section--skills" id="skills">
+      <div class="wrap skills-grid">
+        <div class="skills-col reveal">
+          <p class="kicker">Skills</p>
           <ul class="chips">
             <li class="chip">Project Management</li>
             <li class="chip">360 Marketing Campaigns</li>
@@ -58,138 +209,66 @@
             <li class="chip">HubSpot</li>
             <li class="chip">MS Office</li>
           </ul>
-        </section>
+        </div>
 
-        <section class="side-block">
-          <h2 class="side-title">Languages</h2>
+        <div class="skills-col reveal">
+          <p class="kicker">Languages</p>
           <ul class="lang-list">
-            <li><span class="lang-name">French</span><span class="lang-level">Mother tongue</span></li>
-            <li><span class="lang-name">English</span><span class="lang-level">Fluent</span></li>
-            <li><span class="lang-name">Spanish</span><span class="lang-level">Intermediate</span></li>
-            <li><span class="lang-name">Italian</span><span class="lang-level">Beginner</span></li>
+            <li><span class="lang-name">French</span><span class="lang-bar"><i data-level="100"></i></span><span class="lang-level">Mother tongue</span></li>
+            <li><span class="lang-name">English</span><span class="lang-bar"><i data-level="92"></i></span><span class="lang-level">Fluent</span></li>
+            <li><span class="lang-name">Spanish</span><span class="lang-bar"><i data-level="55"></i></span><span class="lang-level">Intermediate</span></li>
+            <li><span class="lang-name">Italian</span><span class="lang-bar"><i data-level="30"></i></span><span class="lang-level">Beginner</span></li>
           </ul>
-        </section>
+        </div>
 
-        <section class="side-block">
-          <h2 class="side-title side-title--icon">
+        <div class="skills-col skills-col--wide reveal">
+          <p class="kicker kicker--icon">
             Interests
-            <svg class="paw" width="15" height="15" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <svg class="paw" width="15" height="15" viewBox="0 0 40 40" aria-hidden="true">
               <ellipse cx="20" cy="27" rx="8.5" ry="6.5" fill="currentColor"></ellipse>
               <circle cx="10" cy="17" r="3.2" fill="currentColor"></circle>
               <circle cx="16.5" cy="12" r="3.2" fill="currentColor"></circle>
               <circle cx="23.5" cy="12" r="3.2" fill="currentColor"></circle>
               <circle cx="30" cy="17" r="3.2" fill="currentColor"></circle>
             </svg>
-          </h2>
+          </p>
           <p class="interests">Positive psychology and fiction literature, half-marathon running, yoga, and travel shaped by growing up in China. A lifelong love of animals — happily owned by two adopted cats.</p>
-        </section>
-      </aside>
-
-      <!-- ============ MAIN ============ -->
-      <div class="cv__main" id="main">
-        <header class="cv-header">
-          <div>
-            <h1 class="cv-name">Jade Eyraud</h1>
-            <p class="cv-role">EMEA Marketing Manager</p>
-          </div>
-          <a class="btn-pdf" href="assets/Jade_Eyraud_CV_2026.pdf" download>Download PDF</a>
-        </header>
-
-        <p class="cv-profile">EMEA Marketing Manager at Flyability, leading regional marketing strategy and execution across campaigns, events, and partnerships for indoor drone inspection solutions. With 10+ years of experience across marketing, communication, sales, and project management, I enjoy working with cross-functional teams and partners to drive shared goals. Having lived in China, the UK, and France, I bring strong cultural awareness, adaptability, and a collaborative approach to international environments.</p>
-
-        <section>
-          <h2 class="main-title">Experience</h2>
-          <div class="exp-list">
-
-            <article class="exp">
-              <div class="exp-head">
-                <span class="exp-role">EMEA Marketing Manager</span>
-                <span class="exp-date">Nov 2023 – Present</span>
-              </div>
-              <p class="exp-org">Flyability · Paudex, Switzerland · Automation Machinery</p>
-              <ul class="bullets">
-                <li>Develop and execute the EMEA regional marketing strategy aligned with sales targets, supporting CHF 13.2M regional revenue goals.</li>
-                <li>Drive pipeline growth through lead generation, conversion optimisation, and localised campaigns across EMEA markets.</li>
-                <li>Build and manage the EMEA marketing roadmap with product, content, demand generation, and sales teams.</li>
-                <li>Lead regional events, reseller marketing relationships, and strategic partnerships, with a focus on the Nuclear industry.</li>
-                <li>Manage regional marketing operations, KPI reporting, stakeholder communications, and annual budget.</li>
-              </ul>
-            </article>
-
-            <article class="exp">
-              <div class="exp-head">
-                <span class="exp-role">Retail Account Manager</span>
-                <span class="exp-date">Apr – Nov 2022</span>
-              </div>
-              <p class="exp-org">TerraCycle Europe · London, UK · Environmental Services</p>
-              <ul class="bullets">
-                <li>Managed a B2B client portfolio, leading the development and execution of recycling programmes at major European retailers.</li>
-                <li>Partnered with key stakeholders to ensure best-in-class implementation of brand activations.</li>
-                <li>Built post-programme performance analysis and made recommendations for retail revenue growth.</li>
-                <li>Worked cross-functionally with Account Management, Sales, Operations, Materials, Marketing, PR, Legal and Finance, also at Global level.</li>
-              </ul>
-            </article>
-
-            <article class="exp">
-              <div class="exp-head">
-                <span class="exp-role">Marketing Project Manager</span>
-                <span class="exp-date">May 2021 – Mar 2022</span>
-              </div>
-              <p class="exp-org">TerraCycle Europe · London, UK · Environmental Services</p>
-              <ul class="bullets">
-                <li>Managed B2C and B2B digital marketing campaigns to promote TerraCycle's services.</li>
-                <li>Launched free national recycling programmes and led brands' marketing plans.</li>
-                <li>Monitored marketing surveys and reports, adjusting strategy to market specificities.</li>
-                <li>Met project requesters to translate briefs into technically and time-feasible deliveries, working with Creative, Content, Digital, Account Management, and Sales.</li>
-              </ul>
-            </article>
-
-            <article class="exp">
-              <div class="exp-head">
-                <span class="exp-role">Retail Marketing Coordinator</span>
-                <span class="exp-date">Aug 2019 – Apr 2021</span>
-              </div>
-              <p class="exp-org">Clinique · The Estée Lauder Companies · London, UK</p>
-              <ul class="bullets">
-                <li>Delivered retailers' strategy with a 360° approach for all activations on the marketing calendar.</li>
-                <li>Led the development of promotions across all retailers; designed locally produced POS material and managed print buying.</li>
-                <li>Implemented cultural life moments (e.g. Lunar New Year) and organised bi-annual key retailer and sales meetings.</li>
-                <li>Worked cross-functionally with PR, Sales, Social Media, CRM, E-Commerce, and VM; managed budget.</li>
-              </ul>
-            </article>
-
-          </div>
-        </section>
-
-        <section>
-          <h2 class="main-title">Education</h2>
-          <div class="edu-list">
-            <div class="edu">
-              <div>
-                <div class="edu-degree">Master, Luxury Brand Management</div>
-                <div class="edu-school">Paris School of Business (formerly ESG Management School) · Paris, France</div>
-              </div>
-              <span class="edu-date">Sep 2010 – Dec 2012</span>
-            </div>
-            <div class="edu">
-              <div>
-                <div class="edu-degree">Bachelor, International Business Management</div>
-                <div class="edu-school">London Metropolitan University · London, UK</div>
-              </div>
-              <span class="edu-date">Sep 2009 – Jun 2010</span>
-            </div>
-            <div class="edu">
-              <div>
-                <div class="edu-degree">Bachelor, Business Administration</div>
-                <div class="edu-school">Paris School of Business (formerly ESG Management School) · Paris, France</div>
-              </div>
-              <span class="edu-date">Sep 2007 – Jun 2010</span>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
+    </section>
 
-    </article>
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <div class="wrap reveal">
+        <p class="kicker">Contact</p>
+        <h2 class="section__title">Let's talk</h2>
+        <p class="contact-lead">The best way to reach me is by email — I'm always happy to connect.</p>
+        <div class="contact-grid">
+          <a class="contact-item" href="mailto:jade.eyraud@gmail.com">
+            <span class="contact-item__label">Email</span>
+            <span class="contact-item__value">jade.eyraud@gmail.com</span>
+          </a>
+          <a class="contact-item" href="tel:+">
+            <span class="contact-item__label">Phone</span>
+            <span class="contact-item__value"></span>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/jade-eyraud-334b0742" target="_blank" rel="noopener">
+            <span class="contact-item__label">LinkedIn</span>
+            <span class="contact-item__value">jade-eyraud</span>
+          </a>
+          <div class="contact-item contact-item--static">
+            <span class="contact-item__label">Location</span>
+            <span class="contact-item__value">1009 Pully, Switzerland</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jade Eyraud · Built with a little help and a lot of care</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
