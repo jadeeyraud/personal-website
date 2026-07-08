@@ -12,7 +12,8 @@ site/
 └── assets/
     ├── photo-color.jpg            # colour headshot (shown on hover)
     ├── photo-bw.jpg               # black & white headshot (default)
-    └── logos/                     # company & school logos used in the timeline
+    ├── logos/                     # company & school logos used in the timeline
+    └── Jade_Eyraud_CV_2026.pdf    # one-page CV (Download CV button); has LinkedIn QR
 ```
 
 No build step, no dependencies. It's plain static HTML/CSS.
