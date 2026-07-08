@@ -10,9 +10,9 @@ site/
 ├── index.html                     # the page (semantic HTML, all content inline)
 ├── styles.css                     # all styling, responsive + print rules
 └── assets/
-    ├── photo-color.jpg            # colour headshot (shown on hover / when printing)
+    ├── photo-color.jpg            # colour headshot (shown on hover)
     ├── photo-bw.jpg               # black & white headshot (default)
-    └── Jade_Eyraud_CV_2026.pdf    # linked by the "Download PDF" button
+    └── logos/                     # company & school logos used in the timeline
 ```
 
 No build step, no dependencies. It's plain static HTML/CSS.

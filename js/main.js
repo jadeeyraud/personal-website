@@ -27,7 +27,6 @@
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   navAnchors.forEach(function (a) { a.addEventListener('click', closeMenu); });
-  links.querySelector('.nav__cv').addEventListener('click', closeMenu);
 
   /* --- Scroll reveal --- */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
